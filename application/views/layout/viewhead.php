@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.groupedlayercontrol.min.css" />
         <link rel="stylesheet" href="<?=base_url()?>assets/Control.MiniMap.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
     </head>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -28,4 +30,5 @@
     <script src="<?=base_url()?>assets/template/dist/js/demo.js"></script>
     <script src="<?=base_url()?>assets/leaflet.groupedlayercontrol.min.js"></script>
     <script src="<?=base_url()?>assets/Control.MiniMap.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     
