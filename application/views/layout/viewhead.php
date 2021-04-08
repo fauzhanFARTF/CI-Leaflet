@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.groupedlayercontrol.css" />
+        <link rel="stylesheet" href="<?=base_url()?>assets/Control.MiniMap.css" />
     </head>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -26,4 +27,5 @@
     <!-- AdminLTE for demo purposes -->
     <script src="<?=base_url()?>assets/template/dist/js/demo.js"></script>
     <script src="<?=base_url()?>assets/leaflet.groupedlayercontrol.js"></script>
+    <script src="<?=base_url()?>assets/Control.MiniMap.js"></script>
     
