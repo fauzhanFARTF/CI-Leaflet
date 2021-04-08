@@ -20,13 +20,10 @@
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/L.Control.ZoomBar.css"/>
         <link rel="stylesheet" href="<?=base_url()?>assets/Leaflet.Coordinates-0.1.5.css"/>
 
-         <style>
-                  #getZoomButton {
-                position: absolute;
-                top: 18px;
-                left: 20px;
-                z-index: 1001; }
-         </style>
+        <!-- Include leaflet Measure -->
+        <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.measure.css"/>
+
+  
     
 
 
@@ -47,5 +44,7 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
     <script type="text/javascript" src="<?=base_url()?>assets/L.Control.ZoomBar.js"></script>
     <script type="text/javascript" src="<?=base_url()?>assets/Leaflet.Coordinates-0.1.5.js"></script>
+        <!-- Load Leaflet Measure -->
+      <script type="text/javascript" src="<?=base_url()?>assets/leaflet.measure.js"></script>
     
     

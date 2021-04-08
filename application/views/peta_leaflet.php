@@ -12,13 +12,41 @@
     });
     var GoogleSatelliteHybrid= L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
     maxZoom: 22,
-    attribution: 'WebGIS Trainning by Fauzan Nurrachman, S. Si., S. Kom'
+    attribution: 'Google Satellite Hybrid WebGIS Trainning by Fauzan Nurrachman, S. Si., S. Kom '
     }).addTo(map);
 
+    var GoogleMaps= L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    maxZoom: 22,
+    opacity:1.0,
+    attribution: 'Google Maps WebGIS Trainning by Fauzan Nurrachman, S. Si., S. Kom '
+    });
+
+    var GoogleRoads= L.tileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
+    maxZoom: 22,
+    opacity:1.0,
+    attribution: 'Google Roads WebGIS Trainning by Fauzan Nurrachman, S. Si., S. Kom '
+    });
+    
+    var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+    var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    });
+
+    var USGS_USImagery = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 20,
+	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    });
+
     // Basemap
-    var baseLayers = {'Google Satellite Hybrid': GoogleSatelliteHybrid};
+    var baseLayers = {'Google Satellite Hybrid': GoogleSatelliteHybrid,'OpenStreetmap Mapnik': OpenStreetMap_Mapnik, 'Stadia Dark': Stadia_AlidadeSmoothDark , 'USGS Imagery' : USGS_USImagery, 'Google Maps': GoogleMaps,'GoogleRoad':GoogleRoads ,};
     var overlayLayers = {}
     L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
+
 
     // Mini Map
     var osmUrl='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
@@ -86,4 +114,28 @@
     div.innerHTML = '<img src="<?=base_url()?>assets/north-arrow.png" width="`150px" height="150px">';
     return div; }
     north.addTo(map);
+
+    // measure
+    var plugin = L.control.measure({
+    //  control position
+    position: 'topleft',
+    //  weather to use keyboard control for this plugin
+    keyboard: true,
+    //  shortcut to activate measure
+    activeKeyCode: 'M'.charCodeAt(0),
+    //  shortcut to cancel measure, defaults to 'Esc'
+    cancelKeyCode: 27,
+    //  line color
+    lineColor: 'red',
+    //  line weight
+    lineWeight: 2,
+    //  line dash
+    lineDashArray: '6, 6',
+    //  line opacity
+    lineOpacity: 1,
+    //  distance formatter
+    // formatDistance: function (val) {
+    //   return Math.round(1000 * val / 1609.344) / 1000 + 'mile';
+    // }
+    }).addTo(map)
 </script>
