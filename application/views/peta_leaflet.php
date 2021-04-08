@@ -33,5 +33,12 @@
     // Geocoder
     L.Control.geocoder({position :"topleft", collapsed:true}).addTo(map);
 
+    // Mata Angin
+    var north = L.control({position: "bottomright"});
+    north.onAdd = function(map) {
+    var div = L.DomUtil.create("div", "info legend");
+    div.innerHTML = '<img src="<?=base_url()?>assets/north-arrow.png" width="`150px" height="150px">';
+    return div; }
+    north.addTo(map);
 
 </script>
