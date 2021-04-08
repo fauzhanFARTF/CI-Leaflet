@@ -16,6 +16,19 @@
         <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.groupedlayercontrol.min.css" />
         <link rel="stylesheet" href="<?=base_url()?>assets/Control.MiniMap.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+        <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css">
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/L.Control.ZoomBar.css"/>
+        <link rel="stylesheet" href="<?=base_url()?>assets/Leaflet.Coordinates-0.1.5.css"/>
+
+         <style>
+                  #getZoomButton {
+                position: absolute;
+                top: 18px;
+                left: 20px;
+                z-index: 1001; }
+         </style>
+    
+
 
     </head>
 
@@ -31,4 +44,8 @@
     <script src="<?=base_url()?>assets/leaflet.groupedlayercontrol.min.js"></script>
     <script src="<?=base_url()?>assets/Control.MiniMap.min.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/L.Control.ZoomBar.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/Leaflet.Coordinates-0.1.5.js"></script>
+    
     
