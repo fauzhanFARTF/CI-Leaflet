@@ -23,10 +23,6 @@
         <!-- Include leaflet Measure -->
         <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.measure.css"/>
 
-  
-    
-
-
     </head>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
